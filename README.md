@@ -33,3 +33,7 @@ osascript sendMessage_text_or_text+file.applescript hasexisted@icloud.com "send 
 命令行中输入命令发送 文本消息
 osascript sendMessage_only_text.applescript 13699992222  "Hello there"
 ```
+
+##### 使用效果演示
+
+![演示](test.gif)
