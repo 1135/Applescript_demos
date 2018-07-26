@@ -5,9 +5,31 @@
 
 主要功能：AppleScript通过 [Apple events](https://en.wikipedia.org/wiki/Apple_event) 进行 inter-application communication (IAC) ，将重复的任务**自动化**。
 
-脚本编辑器：[Script Editor](https://en.wikipedia.org/wiki/AppleScript_Editor)macOS系统自带，提供基本的调试功能。
+脚本编辑器：[Script Editor](https://en.wikipedia.org/wiki/AppleScript_Editor)（macOS系统自带）提供基本的调试功能。脚本编辑器可将AppleScripts保存为不同格式。
 
-脚本编辑器可将AppleScripts保存为不同格式：纯文本plain text (.applescript)，编译脚本compiled script(.scpt)，脚本包script bundle (.scptd)，应用程序application（.app）。
+AppleScript的文件存在形式：
+* 纯文本plain text (.applescript)
+* 编译脚本compiled script (.scpt)
+* 脚本包script bundle (.scptd)
+* 应用程序application (.app)
+
+
+### 反编译
+
+编译：
+在Script Editor里，编译脚本时必须不勾选 **仅运行** 选项，只有这样，编译得到的compiled script (.scpt)包含了 **编译代码** 和 **源代码**，可反编译得到applescript源代码。
+在Script Editor里，编译脚本时勾选了 **仅运行** 选项，则编译后的脚本只保存编译过的 **编译代码**，不包含源代码，无法反编译得到applescript源代码。
+
+反编译命令：
+```
+osadecompile  mycompiledapp.app
+osadecompile  mycompiledapp.scpt
+```
+也可以直接使用Script Editor打开看到。
+
+### Security
+
+由于AppleScript的特性（系统自带、功能强大、编译代码难以反编译），已发现利用AppleScript的恶意程序样本。
 
 ### AppleScript与应用程序交互——用Applescript自动发送iMessage消息（文本/文件）
 ```
