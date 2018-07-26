@@ -1,6 +1,15 @@
 # Applescript_demos
+### AppleScript简介
 
-### 用Applescript自动发送iMessage消息（文本/文件）
+[AppleScript](https://en.wikipedia.org/wiki/AppleScript)由苹果开发，macOS系统自带的脚本语言。
+
+主要功能：AppleScript通过 [Apple events](https://en.wikipedia.org/wiki/Apple_event) 进行 inter-application communication (IAC) ，将重复的任务**自动化**。
+
+脚本编辑器：[Script Editor](https://en.wikipedia.org/wiki/AppleScript_Editor)macOS系统自带，提供基本的调试功能。
+
+脚本编辑器可将AppleScripts保存为不同格式：纯文本plain text (.applescript)，编译脚本compiled script(.scpt)，脚本包script bundle (.scptd)，应用程序application（.app）。
+
+### AppleScript与应用程序交互——用Applescript自动发送iMessage消息（文本/文件）
 ```
 注意
 1.不论发送什么类型的iMessage消息（文本/文件），发送目标 都必须在iMessage程序的左侧列表中已经存在“对话”才行，也可以手动“编写新消息”即可在列表中添加一个“对话”
